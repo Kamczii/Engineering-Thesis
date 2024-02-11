@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet  author="kamil"  id="14_CREATE_message_type.xml">
+        <createTable tableName="message_types">
+            <column  name="message_type_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="value" type="text"/>
+        </createTable>
+        <addUniqueConstraint tableName="message_types" columnNames="value"/>
+        <insert tableName="message_types">
+            <column  name="message_type_id"  value="1"/>
+            <column  name="value"  value="CHAT"/>
+        </insert>
+        <insert tableName="message_types">
+            <column  name="message_type_id"  value="2"/>
+            <column  name="value"  value="AUDIO"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

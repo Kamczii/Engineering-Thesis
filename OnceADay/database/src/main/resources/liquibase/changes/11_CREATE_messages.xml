@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet  author="kamil"  id="11_CREATE_messages.xml">
+        <createTable tableName="messages">
+            <column  name="message_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sender_id" type="BIGINT"/>
+            <column name="receiver_id" type="BIGINT"/>
+            <column name="match_id" type="BIGINT"/>
+            <column name="content" type="VARCHAR(255)">
+                    <constraints nullable="false"/>
+            </column>
+            <column name="sent_time" type="DATETIME"/>
+            <column name="created_time" type="DATETIME" defaultValue="now()"/>
+            <column name="seen" type="bool"/>
+            <column name="active" type="bool" defaultValue="true"/>
+        </createTable>
+        <addForeignKeyConstraint
+                baseColumnNames="sender_id"
+                baseTableName="messages"
+                constraintName="messages_sender_id_fkey"
+                referencedColumnNames="user_id"
+                referencedTableName="users"
+        />
+        <addForeignKeyConstraint
+                baseColumnNames="receiver_id"
+                baseTableName="messages"
+                constraintName="messages_receiver_id_fkey"
+                referencedColumnNames="user_id"
+                referencedTableName="users"
+        />
+        <addForeignKeyConstraint
+                baseColumnNames="match_id"
+                baseTableName="messages"
+                constraintName="matches_match_id_fkey"
+                referencedColumnNames="match_id"
+                referencedTableName="matches"
+        />
+    </changeSet>
+</databaseChangeLog>

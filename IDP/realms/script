@@ -1,0 +1,2 @@
+/opt/bitnami/keycloak/bin/kc.sh export --dir /tmp/export
+/opt/bitnami/keycloak/bin/kc.sh import --dir /tmp/export

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Once a day - szkic :)</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+
+<div id="username-page">
+    <div class="username-page-container">
+        <h1 class="title">Wybieranko</h1>
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <label for="name">Moja osoba</label>
+                <select id="name" autocomplete="off" class="form-control">
+                    <option value="bigfreakguy">Bigfreakguy</option>
+                    <option value="bbuilderr">Bbuilderr</option>
+                </select>
+                <label for="name">Twoja osoba</label>
+                <select id="receiver" autocomplete="off" class="form-control">
+                    <option value="bbuilderr">Bbuilderr</option>
+                    <option value="bigfreakguy">Bigfreakguy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">Start Chatting</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Once a day - szkic :)</h2>
+        </div>
+        <div class="connecting">
+            Connecting...
+        </div>
+        <ul id="messageArea">
+        </ul>
+        <form id="messageForm" name="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                    <button type="submit" class="primary">Wyślij</button>
+                </div>
+            </div>
+            <input type="file" id="audio" accept="audio/mpeg-3" />
+            <div class="audio">
+                <button id = "start" class="start-icon"> Start</button>
+                <button id = "stop" class="stop-icon"> Stop</button>
+                <button id = "play" class="play-icon"> Play</button>
+                <button id = "send" class="send-icon"> Send</button>
+                <div id = "output"> </div>
+             </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

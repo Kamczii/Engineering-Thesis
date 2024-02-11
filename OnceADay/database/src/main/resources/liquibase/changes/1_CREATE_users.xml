@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet  author="kamil"  id="1_CREATE_users.xml">
+        <createTable tableName="users">
+            <column  name="user_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sso_id" type="uuid"/>
+            <column name="username" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(30)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="profile_picture_id" type="BIGINT"/>
+            <column name="active" type="boolean" defaultValue="true"/>
+        </createTable>
+        <addUniqueConstraint tableName="users" columnNames="sso_id,username"/>
+    </changeSet>
+</databaseChangeLog>

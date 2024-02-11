@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <include file="changes/1_CREATE_users.xml"/>
+    <include file="changes/2_CREATE_files.xml"/>
+    <include file="changes/4_CREATE_label_categories.xml"/>
+    <include file="changes/5_CREATE_rekognition_labels.xml"/>
+    <include file="changes/6_INSERT_label_categories.xml"/>
+    <include file="changes/7_INSERT_rekognition_labels.xml"/>
+    <include file="changes/8_CREATE_label_weights.xml"/>
+    <include file="changes/9_CREATE_matches.xml"/>
+    <include file="changes/10_DELETE_person_description_category.xml"/>
+    <include file="changes/11_CREATE_messages.xml"/>
+    <include file="changes/12_UPDATE_users.xml"/>
+    <include file="changes/13_UPDATE_messages.xml"/>
+    <include file="changes/14_CREATE_message_type.xml"/>
+    <include file="changes/15_UPDATE_messages.xml"/>
+    <include file="changes/16_UPDATE_message_types.xml"/>
+</databaseChangeLog>

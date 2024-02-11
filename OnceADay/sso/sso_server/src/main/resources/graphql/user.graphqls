@@ -1,0 +1,21 @@
+type Query {
+    users: [User]
+    userById(id: ID!): User!
+    userByUsername(username: String!): User!
+}
+
+type QueryResolver {
+    users: [User]
+    user(id: ID!): User!
+}
+
+type User {
+    id: ID!
+    username: String!
+    firstName: String!
+    lastName: String!
+    avatar: String
+    weights: [Weight]
+    activities: [String]
+    matches: [User]
+}

@@ -1,0 +1,6 @@
+type Label {
+    id: ID!
+    label: String!
+    value: String!
+    category: Category!
+}

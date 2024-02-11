@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet  author="kamil"  id="5_CREATE_rekognition_labels.xml">
+        <createTable tableName="label_weights">
+            <column  name="label_weight_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT"/>
+            <column name="label_id" type="BIGINT"/>
+            <column name="weight" type="int"/>
+            <column name="updated_date" type="date"/>
+            <column name="active" type="boolean" defaultValue="true"/>
+        </createTable>
+        <addForeignKeyConstraint
+                baseColumnNames="user_id"
+                baseTableName="label_weights"
+                constraintName="label_weights_user_id_fkey"
+                referencedColumnNames="user_id"
+                referencedTableName="users"
+            />
+        <addForeignKeyConstraint
+                baseColumnNames="label_id"
+                baseTableName="label_weights"
+                constraintName="label_weights_label_id_fkey"
+                referencedColumnNames="label_id"
+                referencedTableName="rekognition_labels"
+        />
+        <createIndex indexName="label_user_id_idx" tableName="label_weights">
+            <column name="user_id"/>
+        </createIndex>
+        <createIndex indexName="label_id_idx" tableName="label_weights">
+            <column name="label_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

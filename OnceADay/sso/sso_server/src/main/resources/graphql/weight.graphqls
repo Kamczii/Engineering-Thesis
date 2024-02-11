@@ -1,0 +1,12 @@
+extend type Query {
+    weights: [Weight]
+    weightsPage(skip: Int, take: Int): [Weight]
+    weight(id: ID!): Weight
+}
+
+type Weight {
+    label: String!
+    category: String!
+    weight: Int!
+    updatedAt: String!
+}

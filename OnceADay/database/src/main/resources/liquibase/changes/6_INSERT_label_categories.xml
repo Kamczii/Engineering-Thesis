@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet  author="kamil"  id="6_INSERT_label_categories.xml">
+
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="1"/>
+            <column  name="label"  value="Actions"/>
+            <column  name="value"  value="ACTIONS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="2"/>
+            <column  name="label"  value="Animals and Pets"/>
+            <column  name="value"  value="ANIMALS_AND_PETS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="3"/>
+            <column  name="label"  value="Apparel and Accessories"/>
+            <column  name="value"  value="APPAREL_AND_ACCESSORIES"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="4"/>
+            <column  name="label"  value="Beauty and Personal Care"/>
+            <column  name="value"  value="BEAUTY_AND_PERSONAL_CARE"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="5"/>
+            <column  name="label"  value="Buildings and Architecture"/>
+            <column  name="value"  value="BUILDINGS_AND_ARCHITECTURE"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="6"/>
+            <column  name="label"  value="Colors and Visual Composition"/>
+            <column  name="value"  value="COLORS_AND_VISUAL_COMPOSITION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="7"/>
+            <column  name="label"  value="Damage Detection"/>
+            <column  name="value"  value="DAMAGE_DETECTION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="8"/>
+            <column  name="label"  value="Education"/>
+            <column  name="value"  value="EDUCATION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="9"/>
+            <column  name="label"  value="Events and Attractions"/>
+            <column  name="value"  value="EVENTS_AND_ATTRACTIONS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="10"/>
+            <column  name="label"  value="Everyday Objects"/>
+            <column  name="value"  value="EVERYDAY_OBJECTS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="11"/>
+            <column  name="label"  value="Expressions and Emotions"/>
+            <column  name="value"  value="EXPRESSIONS_AND_EMOTIONS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="12"/>
+            <column  name="label"  value="Food and Beverage"/>
+            <column  name="value"  value="FOOD_AND_BEVERAGE"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="13"/>
+            <column  name="label"  value="Furniture and Furnishings"/>
+            <column  name="value"  value="FURNITURE_AND_FURNISHINGS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="14"/>
+            <column  name="label"  value="Health and Fitness"/>
+            <column  name="value"  value="HEALTH_AND_FITNESS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="15"/>
+            <column  name="label"  value="Hobbies and Interests"/>
+            <column  name="value"  value="HOBBIES_AND_INTERESTS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="16"/>
+            <column  name="label"  value="Home and Indoors"/>
+            <column  name="value"  value="HOME_AND_INDOORS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="17"/>
+            <column  name="label"  value="Home Appliances"/>
+            <column  name="value"  value="HOME_APPLIANCES"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="18"/>
+            <column  name="label"  value="Kitchen and Dining"/>
+            <column  name="value"  value="KITCHEN_AND_DINING"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="19"/>
+            <column  name="label"  value="Materials"/>
+            <column  name="value"  value="MATERIALS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="20"/>
+            <column  name="label"  value="Medical"/>
+            <column  name="value"  value="MEDICAL"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="21"/>
+            <column  name="label"  value="Nature and Outdoors"/>
+            <column  name="value"  value="NATURE_AND_OUTDOORS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="22"/>
+            <column  name="label"  value="Offices and Workspaces"/>
+            <column  name="value"  value="OFFICES_AND_WORKSPACES"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="23"/>
+            <column  name="label"  value="Patterns and Shapes"/>
+            <column  name="value"  value="PATTERNS_AND_SHAPES"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="24"/>
+            <column  name="label"  value="Performing Arts"/>
+            <column  name="value"  value="PERFORMING_ARTS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="25"/>
+            <column  name="label"  value="Person Description"/>
+            <column  name="value"  value="PERSON_DESCRIPTION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="26"/>
+            <column  name="label"  value="Plants and Flowers"/>
+            <column  name="value"  value="PLANTS_AND_FLOWERS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="27"/>
+            <column  name="label"  value="Profession"/>
+            <column  name="value"  value="PROFESSION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="28"/>
+            <column  name="label"  value="Public Safety"/>
+            <column  name="value"  value="PUBLIC_SAFETY"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="29"/>
+            <column  name="label"  value="Religion"/>
+            <column  name="value"  value="RELIGION"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="30"/>
+            <column  name="label"  value="Sports"/>
+            <column  name="value"  value="SPORTS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="31"/>
+            <column  name="label"  value="Symbols and Flags"/>
+            <column  name="value"  value="SYMBOLS_AND_FLAGS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="32"/>
+            <column  name="label"  value="Technology and Computing"/>
+            <column  name="value"  value="TECHNOLOGY_AND_COMPUTING"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="33"/>
+            <column  name="label"  value="Text and Documents"/>
+            <column  name="value"  value="TEXT_AND_DOCUMENTS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="34"/>
+            <column  name="label"  value="Tools and Machinery"/>
+            <column  name="value"  value="TOOLS_AND_MACHINERY"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="35"/>
+            <column  name="label"  value="Toys and Gaming"/>
+            <column  name="value"  value="TOYS_AND_GAMING"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="36"/>
+            <column  name="label"  value="Transport and Logistics"/>
+            <column  name="value"  value="TRANSPORT_AND_LOGISTICS"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="37"/>
+            <column  name="label"  value="Travel and Adventure"/>
+            <column  name="value"  value="TRAVEL_AND_ADVENTURE"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="38"/>
+            <column  name="label"  value="Vehicles and Automotive"/>
+            <column  name="value"  value="VEHICLES_AND_AUTOMOTIVE"/>
+        </insert>
+        <insert tableName="label_categories">
+            <column  name="category_id"  value="39"/>
+            <column  name="label"  value="Weapons and Military"/>
+            <column  name="value"  value="WEAPONS_AND_MILITARY"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

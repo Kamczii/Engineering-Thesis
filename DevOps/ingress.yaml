@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: oad-ingress
+spec:
+  rules:
+    - host: oad.com
+      http: # protocol external -> internal
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway-service
+                port:
+                  number: 8081

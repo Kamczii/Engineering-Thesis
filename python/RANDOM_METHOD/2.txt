@@ -1,0 +1,1 @@
+alert tcp any any -> any 80 (msg:"Possible Manual Injection detected"; flow:to_server,established; content:"GET"; http_method; content:"?parameter=malicious_keyword"; http_uri; sid:1000004;)
